@@ -1,0 +1,241 @@
+/* Stylish Dark Theme with Neon Accents */
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #121212;
+  --accent-neon: #00ffcc;
+  --accent-purple: #9d4edd;
+  --accent-pink: #ff006e;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Animated background gradient */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 20% 80%, rgba(0, 255, 204, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(157, 78, 221, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 40% 40%, rgba(255, 0, 110, 0.1) 0%, transparent 50%);
+  z-index: -1;
+  animation: gradientShift 20s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { transform: scale(1) rotate(0deg); }
+  25% { transform: scale(1.1) rotate(1deg); }
+  50% { transform: scale(1) rotate(0deg); }
+  75% { transform: scale(1.05) rotate(-1deg); }
+}
+
+/* Glassmorphism card */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  z-index: 1000;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 5px 0;
+}
+
+.nav-links a:hover {
+  color: var(--accent-neon);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-neon), var(--accent-purple));
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, var(--accent-neon), var(--accent-purple), var(--accent-pink));
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientFlow 5s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 40px;
+  border: 2px solid var(--accent-neon);
+  color: var(--accent-neon);
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, var(--accent-neon), transparent);
+  transition: left 0.5s ease;
+  z-index: -1;
+}
+
+.cta-button:hover {
+  color: var(--bg-primary);
+  box-shadow: 0 0 30px var(--accent-neon);
+}
+
+.cta-button:hover::before {
+  left: 100%;
+}
+
+/* Prong Page Styles */
+.prong-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #050505 0%, #000000 100%);
+}
+
+#canvas-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.prong-ui {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  z-index: 100;
+}
+
+.prong-ui p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  text-align: center;
+}
+
+.prong-ui .instructions {
+  color: var(--accent-neon);
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  
+  .nav-links {
+    gap: 15px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .prong-ui {
+    padding: 12px 20px;
+    bottom: 20px;
+  }
+}

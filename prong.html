@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prong | Interactive 3D Mesh</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Prong page specific styles - minimal, just the mesh */
+        html, body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #000;
+        }
+        
+        .prong-header {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+        
+        .prong-header a {
+            color: var(--accent-neon);
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        
+        .prong-header a:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <header class="prong-header">
+        <a href="index.html">← Back</a>
+    </header>
+    
+    <div class="prong-container">
+        <div id="canvas-container"></div>
+        
+        <div class="prong-ui">
+            <p><span class="instructions">Drag</span> to interact • <span class="instructions">Release</span> to watch it flow</p>
+        </div>
+    </div>
+    
+    <!-- Three.js from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r158/three.min.js"></script>
+    <script src="js/mesh.js"></script>
+</body>
+</html>

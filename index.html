@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runwei Amoeba | Interactive Portfolio</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar glass-card">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="prong.html">Prong</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Runwei Amoeba</h1>
+        <p>Interactive experiences crafted with code, creativity, and a touch of digital magic. Dive into the prong page to explore a living mesh of interconnected triangles.</p>
+        <a href="prong.html" class="cta-button">Enter Prong</a>
+    </section>
+
+    <section id="about" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 100px 20px;">
+        <div class="glass-card" style="max-width: 800px; padding: 50px;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px; background: linear-gradient(90deg, var(--accent-neon), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">About</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem;">
+                This is my digital playground where code meets art. The prong page features an interactive 3D mesh network of triangles that flow and respond to your touch like water. Built with Three.js and pure JavaScript, it creates an organic, living visualization of interconnected data.
+            </p>
+        </div>
+    </section>
+
+    <section id="projects" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 100px 20px;">
+        <div style="max-width: 1000px; width: 100%;">
+            <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 50px; background: linear-gradient(90deg, var(--accent-neon), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Projects</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+                <div class="glass-card" style="padding: 30px;">
+                    <h3 style="color: var(--accent-neon); margin-bottom: 15px;">Prong Interactive Mesh</h3>
+                    <p style="color: var(--text-secondary);">A 3D network of triangles that flows like water and responds to touch interaction.</p>
+                    <a href="prong.html" style="color: var(--accent-neon); text-decoration: none; margin-top: 15px; display: inline-block;">Explore →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" style="padding: 50px 20px; text-align: center; border-top: 1px solid var(--glass-border);">
+        <p style="color: var(--text-secondary);">© 2026 Runwei Amoeba • peirunwei@gmail.com</p>
+    </footer>
+</body>
+</html>
