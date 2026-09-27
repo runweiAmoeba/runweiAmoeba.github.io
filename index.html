@@ -1,54 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-        <title>Runwei Amoeba | Interactive Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Artificial Generations — Fifth Avenue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <nav class="navbar glass-card">
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="prong.html">Prong</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section class="hero" id="home">
-        <h1>Runwei Amoeba</h1>
-        <p>Interactive experiences crafted with code, creativity, and a touch of digital magic. Dive into the prong page to explore a living mesh of interconnected triangles.</p>
-        <a href="prong.html" class="cta-button">Enter Prong</a>
-    </section>
-
-    <section id="about" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 100px 20px;">
-        <div class="glass-card" style="max-width: 800px; padding: 50px;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 20px; background: linear-gradient(90deg, var(--accent-neon), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">About</h2>
-            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem;">
-                This is my digital playground where code meets art. The prong page features an interactive 3D mesh network of triangles that flow and respond to your touch like water. Built with Three.js and pure JavaScript, it creates an organic, living visualization of interconnected data.
-            </p>
-        </div>
-    </section>
-
-    <section id="projects" style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 100px 20px;">
-        <div style="max-width: 1000px; width: 100%;">
-            <h2 style="font-size: 2.5rem; text-align: center; margin-bottom: 50px; background: linear-gradient(90deg, var(--accent-neon), var(--accent-purple)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Projects</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
-                <div class="glass-card" style="padding: 30px;">
-                    <h3 style="color: var(--accent-neon); margin-bottom: 15px;">Prong Interactive Mesh</h3>
-                    <p style="color: var(--text-secondary);">A 3D network of triangles that flows like water and responds to touch interaction.</p>
-                    <a href="prong.html" style="color: var(--accent-neon); text-decoration: none; margin-top: 15px; display: inline-block;">Explore →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer id="contact" style="padding: 50px 20px; text-align: center; border-top: 1px solid var(--glass-border);">
-        <p style="color: var(--text-secondary);">© 2026 Runwei Amoeba • peirunwei@gmail.com</p>
-    </footer>
-</body>
-</html>
+  <header class="topbar"><a class="wordmark" href="#top"><span class="mark">✳</span> artificial generations</a><nav><a href="#experience">Experience</a><a href="#library">Library</a><a href="#about">About</a></nav><button class="pill dark" id="soundBtn">◉ Ambient off</button></header>
+  <main id="top">
+    <section class="hero"><div class="hero-copy"><p class="eyebrow">AG / 001 — SPATIAL STUDY</p><h1>Ideas, <em>made</em><br>visible.</h1><p class="lede">A living library of AI-generated work, presented inside a digital twin of the Fifth Avenue glass cube.</p><a class="pill lime" href="#experience">Enter the cube <span>↗</span></a></div><div class="hero-art"><div class="skyline"><i></i><i></i><i></i><i></i><i></i></div><div class="cube"><div class="cube-roof"></div><div class="cube-face left"></div><div class="cube-face right"></div><div class="stairwell"><span>5TH AVENUE</span><b>↓</b></div></div><div class="art-caption">NEW YORK / 40°45′39″ N<br>INTERACTIVE ARCHIVE</div></div></section>
+    <section class="experience" id="experience"><div class="section-head"><div><p class="eyebrow">THE STORE / NAVIGATE</p><h2>Under the surface.</h2></div><p class="section-note">Move through a stylized spatial study of Apple Fifth Avenue. Select a zone to learn more.</p></div><div class="store-shell"><aside class="store-nav"><div class="live"><span></span> LIVE MODEL</div><button class="zone active" data-zone="cube"><b>01</b><span>Glass cube<small>Fifth Avenue entrance</small></span><i>↗</i></button><button class="zone" data-zone="genius"><b>02</b><span>Genius Bar<small>Support & learning</small></span><i>↗</i></button><button class="zone" data-zone="iphone"><b>03</b><span>iPhone gallery<small>Current collection</small></span><i>↗</i></button><button class="zone" data-zone="studio"><b>04</b><span>Today at Apple<small>Forum & workshops</small></span><i>↗</i></button><p class="store-tip">DRAG TO ROTATE<br>SCROLL TO ZOOM</p></aside><div class="scene-wrap"><div class="scene" id="scene"><div class="glass-cube"><div class="cube-grid"></div><div class="apple-logo">●</div><div class="doors"></div></div><div class="ground"></div><div class="basement"><div class="ceiling-lights"></div><div class="table t1">iPhone <small>PRO</small></div><div class="table t2">MacBook <small>AIR</small></div><div class="table t3">iPad <small>PRO</small></div><div class="wall-label">APPLE FIFTH AVENUE</div></div><div class="employee e1"><span>✦</span></div><div class="employee e2"><span>✦</span></div><div class="employee e3"><span>✦</span></div></div><div class="scene-controls"><button id="resetView">Reset view</button><span id="sceneStatus">Showing glass cube entrance</span><strong>↗</strong></div></div><div class="info-panel"><p class="eyebrow" id="panelKicker">01 / ENTRANCE</p><h3 id="panelTitle">A room of light.</h3><p id="panelText">The iconic glass cube opens onto a luminous underground space. Its stairwell is a threshold between the energy of Fifth Avenue and the calm below.</p><div class="specs"><span>01 <small>LANDMARK</small></span><span>24/7 <small>PORTAL</small></span><span>2006 <small>OPENED</small></span></div></div></div></section>
+    <section class="library" id="library"><div class="section-head"><div><p class="eyebrow">THE LIBRARY / 2026</p><h2>Signals from<br>the synthetic.</h2></div><a class="text-link" href="#library">View all work ↗</a></div><div class="work-grid"><article class="work work-a"><div class="orb"></div><span>AG—014</span><h3>Soft machines<br>for hard days</h3><small>IMAGE / GENERATIVE</small></article><article class="work work-b"><div class="lines"></div><span>AG—021</span><h3>Architecture<br>of a thought</h3><small>3D / SPATIAL</small></article><article class="work work-c"><div class="portrait"></div><span>AG—033</span><h3>After the<br>last signal</h3><small>VIDEO / MOTION</small></article></div></section>
+    <section class="manifesto" id="about"><p class="eyebrow">WHY ARTIFICIAL GENERATIONS</p><h2>Not a gallery.<br>A <em>conversation</em>.</h2><p>We collect the beautiful friction between human intention and machine imagination. Every generation is an invitation to look again.</p></section>
+  </main><footer><span>© ARTIFICIAL GENERATIONS 2026</span><span>BUILT FOR CURIOSITY — NYC</span></footer>
+  <script src="js/app.js"></script>
+</body></html>
